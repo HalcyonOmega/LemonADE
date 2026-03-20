@@ -1,0 +1,65 @@
+{
+  "name": "lemonade",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Agentic Development Environment (ADE)",
+  "type": "module",
+  "packageManager": "bun@1.3.10",
+  "main": "out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build && electron-builder",
+    "build:app": "electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit -p tsconfig.web.json && tsc --noEmit -p tsconfig.node.json",
+    "rebuild:native": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@tanstack/react-hotkeys": "^0.4.2",
+    "@tanstack/react-router": "^1.168.1",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.577.0",
+    "node-pty": "^1.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@electron/rebuild": "^3.7.0",
+    "@tailwindcss/vite": "^4.2.2",
+    "@tanstack/cli": "^0.62.4",
+    "@tanstack/router-vite-plugin": "^1.166.16",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.27",
+    "electron": "^33.3.1",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^3.0.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "build": {
+    "appId": "com.halcyonyx.lemonade",
+    "productName": "LemonADE",
+    "directories": {
+      "output": "release"
+    },
+    "asar": true,
+    "asarUnpack": ["**/node_modules/node-pty/**"],
+    "files": ["out/**/*", "package.json"],
+    "win": {
+      "target": ["nsis"]
+    },
+    "mac": {
+      "target": ["dmg"],
+      "category": "public.app-category.developer-tools"
+    }
+  }
+}

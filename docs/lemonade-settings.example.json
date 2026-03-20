@@ -1,0 +1,7 @@
+{
+  "name": "My app",
+  "previewUrl": "http://localhost:3000",
+  "devPort": 3000,
+  "verifyCommand": "bun run check",
+  "agentCommand": ""
+}

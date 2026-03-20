@@ -1,0 +1,7 @@
+{
+  "name": "Example app",
+  "previewUrl": "http://127.0.0.1:3000",
+  "devPort": 3000,
+  "verifyCommand": "echo ok",
+  "agentCommand": "echo \"Set your agent CLI in manifest; run from Shell or Agent session tab\""
+}

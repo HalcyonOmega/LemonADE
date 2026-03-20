@@ -1,0 +1,7 @@
+{
+  "name": "LemonADE",
+  "previewUrl": "http://127.0.0.1:3000",
+  "devPort": 3000,
+  "verifyCommand": "bun run typecheck",
+  "agentCommand": "Run your agent CLI from Shell or Agent session"
+}
