@@ -31,7 +31,7 @@ LemonADE treats each **project** as the primary unit: everything you open or get
 
 ## Status
 
-Early stage — product direction and architecture are being refined before implementation details (desktop stack, manifest format, process model) are locked.
+MVP build — compose-only architecture; **desktop: Electron** (Chromium + Node main, `node-pty` + xterm, embedded preview). See [docs/MVP-PLAN.md](docs/MVP-PLAN.md) for phased implementation (spike → manifest → UI → verify → agent notifications).
 
 ## References
 
